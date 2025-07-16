@@ -17,6 +17,7 @@ This file tracks all usage of LLMs (e.g., ChatGPT, Claude, Gemini 2.5 Pro) for a
 ### 2025-07-16
 - Designed folder structure and initial README with assistance.
 - Generated initial content for README.md.
-- Summarized the paper "Generative Verifiers: Reward Modeling as Next-Token Prediction", which was provided for reference in the assignment, using ChatPDF.
+- Used ChatPDF to summarize the paper "Generative Verifiers: Reward Modeling as Next-Token Prediction", which was provided for reference in the assignment.
 - Used ChatGPT to suggest required packages for project setup.
 - Added core libraries to `requirements.txt` for dataset loading, OpenAI usage, and trainer utilities.
+- Was assisted to update .gitignore to exclude cache, envs, results, and reference code
