@@ -1,0 +1,11 @@
+# Core Libraries
+transformers>=4.40.0         # For DPOTrainer, model loading
+datasets>=2.19.0             # For loading prm800k (Intel/orca_dpo_pairs)
+trl>=0.7.10                  # For DPO training utils (from Hugging Face)
+openai>=1.22.0               # For GPT-based stepwise reward scoring
+tqdm                         # Progress bars for loops
+numpy                        # For basic math/array ops
+pandas                       # Optional: for EDA, debugging
+
+# Jupyter (optional, for notebooks)
+jupyter
