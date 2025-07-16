@@ -3,7 +3,7 @@
 ### `LLM_USAGE.md` (Initial Content)
 # LLM_USAGE.md
 
-This file tracks all usage of LLMs (e.g., ChatGPT, Claude, Gemini 2.5 Pro) for assistance during this project.
+> This file tracks all usage of LLMs (e.g., ChatGPT, Claude, Gemini 2.5 Pro) for assistance during this project.
 
 ---
 
@@ -21,3 +21,7 @@ This file tracks all usage of LLMs (e.g., ChatGPT, Claude, Gemini 2.5 Pro) for a
 - Used ChatGPT to suggest required packages for project setup.
 - Added core libraries to `requirements.txt` for dataset loading, OpenAI usage, and trainer utilities.
 - Was assisted to update .gitignore to exclude cache, envs, results, and reference code
+- Used ChatGPT to generate `process_prm800k.py` for loading and previewing prm800k dataset.
+- Helped me with an exploration notebook `explore_prm800k.ipynb` to inspect structure and test step-splitting.
+
+---
