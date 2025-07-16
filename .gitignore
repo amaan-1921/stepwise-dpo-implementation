@@ -1,1 +1,33 @@
+# Ignore Python cache
+__pycache__/
+*.py[cod]
+*.so
+
+# Ignore Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Ignore virtual environment folders
+.venv/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore model checkpoints and outputs
+*.ckpt
+*.pt
+*.pth
+*.bin
+*.h5
+*.onnx
+
+# Ignore result outputs
+results/
+logs/
+
+# Ignore secrets
+.env
+.envrc
+
+# Ignore reference repo (baseline code)
 reference/
