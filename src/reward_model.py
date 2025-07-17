@@ -33,7 +33,7 @@ Is this reasoning step helpful and accurate in answering the question? Reply onl
             temperature=0.0,
         )
 
-        answer = response.choices[0].message.content.strip()
+        answer = response.choices[0].message.content.strip() # type: ignore
         if "Yes" in answer:
             return 1
         else:
