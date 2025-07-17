@@ -26,3 +26,11 @@
 - Helped me with an exploration notebook `explore_prm800k.ipynb` to inspect structure and test step-splitting.
 
 ---
+
+
+### 2025-07-17
+
+- Used ChatGPT to revisit the problem statement and deeply understand the LLM based reward system.
+- Took help for the `reward_model.py` file to implement the LLM based reward system.
+- Helped me create a script for testing the openAI API.
+- Used ChatGPT to help me analyze the baseline code that was given in the document. As of now, solely focusing on `train.py` and `stepdpo_trainer.py`
