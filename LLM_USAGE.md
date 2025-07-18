@@ -41,3 +41,4 @@
 - Used ChatGPT to understand how to `compute_loss` function works.
 - Helped me understand how StepDPOTrainer works with Trainer.
 - Helped me code `stepwise_trainer.py`.
+- Used ChatGPT to debug issues in `stepwise_trainer.py`.
