@@ -31,6 +31,12 @@
 ### 2025-07-17
 
 - Used ChatGPT to revisit the problem statement and deeply understand the LLM based reward system.
-- Took help for the `reward_model.py` file to implement the LLM based reward system.
+- Took help with reward_model.py to understand how to implement an LLM-based scoring system for reasoning steps.
 - Helped me create a script for testing the openAI API.
-- Used ChatGPT to help me analyze the baseline code that was given in the document. As of now, solely focusing on `train.py` and `stepdpo_trainer.py`
+- Used ChatGPT to help me analyze the baseline code that was given in the document. Currently focusing on `train.py` and `stepdpo_trainer.py`
+
+---
+
+### 2025-07-18
+- Used ChatGPT to understand how to `compute_loss` function works.
+- Helped me understand how StepDPOTrainer works with Trainer.
