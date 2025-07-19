@@ -43,3 +43,9 @@
 - Helped me code `stepwise_trainer.py`.
 - Used ChatGPT to debug issues in `stepwise_trainer.py`.
 - Used ChatGPT to get the code for `train.py`.
+
+---
+
+### 2025-07-18
+- Used ChatGPT to fix the access error to load the model `mistralai/Mistral-7B-v0.1 model` from Hugging Face.
+- Created a RewardModel class in `reward_model.py` using ChatGPT
