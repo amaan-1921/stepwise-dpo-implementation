@@ -49,3 +49,5 @@
 ### 2025-07-18
 - Used ChatGPT to fix the access error to load the model `mistralai/Mistral-7B-v0.1 model` from Hugging Face.
 - Created a RewardModel class in `reward_model.py` using ChatGPT
+- Looked for alternatives to Mistral model as it was very large.
+- Asked ChatGPT to find a model that can be easily trainable, and it came up with DistilGPT2
