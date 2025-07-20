@@ -12,8 +12,6 @@ from transformers.training_args import TrainingArguments
 from transformers import (
     AutoModelForCausalLM,
     AutoTokenizer,
-    PreTrainedTokenizerBase,
-    TrainingArguments,
 )
 from stepwise_trainer import StepDPOTrainer
 from data.process_prm800k import load_raw_prm800k
@@ -134,7 +132,7 @@ def main():
         learning_rate=5e-6,
         warmup_steps=50,
         save_strategy="epoch",
-        evaluation_strategy="epoch",
+        eval_strategy="epoch",
         logging_dir="./logs",
         logging_steps=100,
         fp16=True,
@@ -150,7 +148,6 @@ def main():
         args=training_args,
         train_dataset=train_dataset,
         eval_dataset=eval_dataset,
-        tokenizer=tokenizer,
         data_collator=data_collator,
     )
     
