@@ -3,22 +3,31 @@ import os
 import time
 from dotenv import load_dotenv
 import torch
-from transformers import AutoModelForSequenceClassification
+from transformers import GPT2PreTrainedModel, GPT2Model, GPT2Config
+from transformers.modeling_utils import PreTrainedModel
+import torch.nn as nn
 
 
 load_dotenv()
 
-class RewardModel(torch.nn.Module):
-    def __init__(self, model_name):
-        super().__init__()
-        self.model = AutoModelForSequenceClassification.from_pretrained(
-            model_name,
-            num_labels=1  # for scalar score
-        )
+class RewardModel(GPT2PreTrainedModel):
+    def __init__(self, config):
+        super().__init__(config)
+        self.model = GPT2Model(config)
+        self.score = nn.Linear(config.hidden_size, 1)
 
-    def forward(self, input_ids, attention_mask):
-        output = self.model(input_ids=input_ids, attention_mask=attention_mask)
-        return output.logits 
+    def forward(self, input_ids, attention_mask=None):
+        outputs = self.model(input_ids=input_ids, attention_mask=attention_mask)
+        hidden_states = outputs.last_hidden_state[:, -1, :]  # Use last token embedding for GPT2
+        score = self.score(hidden_states)
+        return score
+
+    def get_input_embeddings(self):
+        return self.model.get_input_embeddings()
+
+    def set_input_embeddings(self, value):
+        return self.model.set_input_embeddings(value)
+
 
 # Create client with API key (either from environment or passed explicitly)
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
