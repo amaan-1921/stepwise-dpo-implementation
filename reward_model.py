@@ -1,9 +1,11 @@
+#reward_model.py
 from openai import OpenAI
 import os
 import time
 from dotenv import load_dotenv
 import torch
 from transformers import GPT2PreTrainedModel, GPT2Model, GPT2Config
+from transformers import GPT2LMHeadModel
 from transformers.modeling_utils import PreTrainedModel
 import torch.nn as nn
 
@@ -13,12 +15,12 @@ load_dotenv()
 class RewardModel(GPT2PreTrainedModel):
     def __init__(self, config):
         super().__init__(config)
-        self.model = GPT2Model(config)
+        self.model = GPT2Model.from_pretrained("gpt2")
         self.score = nn.Linear(config.hidden_size, 1)
 
     def forward(self, input_ids, attention_mask=None):
         outputs = self.model(input_ids=input_ids, attention_mask=attention_mask)
-        hidden_states = outputs.last_hidden_state[:, -1, :]  # Use last token embedding for GPT2
+        hidden_states = outputs[0][:, -1, :]  # Use last token embedding for GPT2
         score = self.score(hidden_states)
         return score
 
